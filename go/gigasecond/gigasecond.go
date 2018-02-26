@@ -6,7 +6,9 @@
 package gigasecond
 
 // import path for the time package from the standard library
-import "time"
+import (
+	"time"
+)
 
 // AddGigasecond should have a comment documenting it.
 func AddGigasecond(t time.Time) time.Time {
@@ -14,5 +16,5 @@ func AddGigasecond(t time.Time) time.Time {
 	// Then remove all the stock comments.
 	// They're here to help you get started but they only clutter a finished solution.
 	// If you leave them in, reviewers may protest!
-	return t
+	return t.Add(1000000000 * time.Second)
 }
